@@ -1,0 +1,11 @@
+<stack>
+  <description brief="cob_navigation_tests_fmw">cob_navigation_tests_fmw</description>
+  <author>Maintained by Florian Weisshardt</author>
+  <license>LGPL</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/cob_navigation_tests_fmw</url>
+  <depend stack="cob_navigation" /> <!-- cob_navigation_global -->
+  <depend stack="cob_simulation" /> <!-- cob_bringup_sim -->
+  <depend stack="cob_navigation_tests" /> <!-- navigation_test_skeleton -->
+
+</stack>
