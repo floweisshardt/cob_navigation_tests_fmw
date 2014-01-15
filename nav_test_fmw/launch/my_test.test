@@ -55,7 +55,6 @@
 			<arg name="robot"             value="$( arg robot )" />
 			<arg name="navigation"        value="$( arg navigation )" />
 		</include>
-
 	</group>
 
 	<!-- ####### -->
