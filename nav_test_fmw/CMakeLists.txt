@@ -30,13 +30,13 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #target_link_libraries(example ${PROJECT_NAME})
 
 # rostest for robots
-SET(robotlist
+#SET(robotlist
 #cob3-1
 #cob3-2
-cob3-3
+#cob3-3
 #cob3-4
 #cob3-5
-cob3-6
+#cob3-6
 #cob3-7
 #raw3-1
 #raw3-2
@@ -45,11 +45,18 @@ cob3-6
 #raw3-5
 #raw3-6
 #desire
-)
+#)
 
 # loop through list of robots for testing
-FOREACH(robot ${robotlist})
-	MESSAGE("testing for robot: ${robot}")
-	rosbuild_add_roslaunch_check(launch robot:=${robot})
-	rosbuild_add_rostest(launch/my_test.test)
-ENDFOREACH(robot)
+#FOREACH(robot ${robotlist})
+#	MESSAGE("testing for robot: ${robot}")
+#	rosbuild_add_roslaunch_check(launch robot:=${robot})
+#	rosbuild_add_rostest(launch/my_test.test)
+#ENDFOREACH(robot)
+
+rosbuild_check_for_display(disp)
+if(disp)
+  rosbuild_add_rostest(launch/my_test.test)
+else(disp)
+  rosbuild_add_roslaunch_check(launch robot:=cob3-3)
+endif(disp)
