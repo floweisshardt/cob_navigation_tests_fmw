@@ -12,7 +12,7 @@
 	<arg name="robot_env"        default="ipa-apartment"/>
 	<arg name="map"              default="$(find cob_default_env_config)/$(arg robot_env)/map.yaml"/>
 
-	<arg name="scenarioName"     default="scene1"/>
+	<arg name="scenarioName"     default="scene_fmw"/>
 
 
 
